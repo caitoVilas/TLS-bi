@@ -100,6 +100,10 @@ public class ServiceRegistryConfig {
         if (LocalDate.now().isBefore(certificateStartDate)){
             throw new RuntimeException("Certificate is not valid yet");
         }
+        if (LocalDate.now().isAfter(certificateExpirationDate)){
+            throw new RuntimeException("Certificate is expired");
+        }
+
         var subject = Arrays.stream(certificate.getSubjectDN().getName().split(","))
                 .map(i -> i.split("="))
                 .collect(Collectors.toMap(element -> element[0].trim(), element -> element[1].trim()));
