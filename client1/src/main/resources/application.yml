@@ -1,0 +1,13 @@
+server:
+  port: 50080
+  base-url: https://localhost:50090
+  endpoint: /inyector/test
+  ssl:
+    trust-store: "d:\\certificates\\client\\truststore.jks"
+    trust-store-password: "secret"
+    key-store: "d:\\certificates\\client\\keystore.jks"
+    key-store-password: "secret"
+    key-alias: "client"
+spring:
+  application:
+    name: client

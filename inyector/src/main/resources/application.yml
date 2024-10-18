@@ -1,0 +1,12 @@
+server:
+  port: 50090
+  ssl:
+    enabled: true
+    client-auth: need
+    key-store: "d:\\certificates\\server\\keystore.jks"
+    key-store-password: "secret"
+    key-store-type: "PKCS12"
+    key-store-provider: "SUN"
+    trust-store: "d:\\certificates\\server\\truststore.jks"
+    trust-store-password: "secret"
+    trust-store-type: "PKCS12"
